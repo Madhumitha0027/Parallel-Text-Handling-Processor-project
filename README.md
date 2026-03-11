@@ -50,7 +50,7 @@ Processed results are stored in an SQLite database. Indexing is used to improve 
 ## 📂 Project Structure
 
 ```
-parallel_text_processor/
+Parallel-Text-Handling-Processor-project/
 │
 ├── modules/
 │   ├── text_loader.py        # Text chunking & parallel loader
