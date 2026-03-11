@@ -1,6 +1,6 @@
 import re
 
-#  Positive Rules
+# Positive Rules
 positive_rules = {
     "excellent": 3,
     "amazing": 2,
@@ -18,16 +18,15 @@ negative_rules = {
     "hate": -2
 }
 
+
 def calculate_sentiment(chunk):
 
     score = 0
 
-    # words extract (punctuation remove)
     words = re.findall(r"\b\w+\b", chunk.lower())
 
     for w in words:
-        score += positive_rules.get(w, 0)
-        score += negative_rules.get(w, 0)
+        score += positive_rules.get(w, 0) + negative_rules.get(w, 0)
 
     if score > 0:
         tag = "positive"
